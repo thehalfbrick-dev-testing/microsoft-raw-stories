@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TheHalfBrick™ - Microsoft raw stories</title>
+    <meta name="description"
+        content="Celebrating the life journey of self-made and selfless individuals from all walks of life around the world. Join us to hear speakers share their stories of overcoming setbacks and achieving success.">
+    <meta name="keywords"
+        content="TheHalfBrick, Dubai raw stories, self-made, selfless, success, speakers, setbacks, journey">
+
+
+    <!-- Favicons -->
+    <link href="assets/image/logo.png" rel="icon">
+    <link href="assets/image/logo.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        html {
+            max-width: 100vw;
+        }
+
+
+        .speaker .cards {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(#CB2F1D, #CB2F1D 30%, #ffffff 30%, #ffffff);
+            margin: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .speaker .cards .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            z-index: 100000;
+            border-radius: 20px;
+            overflow: hidden;
+            transform-origin: top;
+        }
+
+        .speaker .cards:hover .imgBx {
+            transform: translateY(30px) scale(0.55);
+        }
+
+        .speaker .cards .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .speaker .cards .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 30px;
+            transform: translateY(100%);
+            transition: 0.5s;
+        }
+
+        .speaker .cards:hover {
+            box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+        }
+
+        .speaker .cards:hover .content {
+            transform: translateY(0);
+        }
+
+        .speaker .cards .content .details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .speaker .cards .content .details h2 {
+            color: #CB2F1D;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .speaker .cards .content .details h2 span {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .speaker .social_icons {
+            position: relative;
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .speaker .social_icons li {
+            list-style: none;
+            margin: 4px;
+        }
+
+        .speaker .social_icons li a {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #294d69;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .speaker .social_icons li a:hover {
+            transform: rotate(360deg);
+            background: #03a9f4;
+        }
+    </style>
+
+</head>
+
+<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+    <main id="main">
+
+        <section id="hero" class="hero">
+            <div class="image-bg"></div>
+            <div class="white"></div>
+            <div class="container text-dark"
+                style="text-align: right; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; height: 70vh; padding: 0 0 5% 0;">
+
+                <h1>Celebrating the life journey of<br> self-made and selfless Women in <br> Digital Business</h1>
+
+                <img class="thb-microsoft" src="./assets/image/thb-microsoft.png" alt="" style="margin-top: 10px;">
+            </div>
+
+            <style>
+                .thb-microsoft {
+                    width: 400px;
+                }
+
+                @media (max-width: 1190px) {
+
+                    .hero .container {
+                        margin-right: 1px;
+                    }
+                }
+
+                @media (max-width: 1090px) {
+                    .hero .container h1 {
+                        font-size: calc(1.375rem + 0.5vw);
+                    }
+
+                    .hero .container {
+                        margin-right: 5px;
+                    }
+                }
+
+                @media (max-width: 895px) {
+                    .hero .container h1 {
+                        font-size: calc(1.375rem + 1.5vw);
+                    }
+
+                    .hero .container {
+                        text-align: center !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        padding: 5% !important;
+                        height: 20vh;
+                        margin-right: auto;
+                    }
+
+                    .image-bg {
+                        display: none;
+                        background-color: #ffffff;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .hero .container {
+                        text-align: center !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        padding: 5% !important;
+                        height: 20vh;
+                        margin-right: auto;
+                    }
+
+                    .thb-microsoft {
+                        width: 100%;
+                    }
+                }
+            </style>
+
+
+
+
+            <!-- <a href="#" class="cta-btn-link text-white"ś
+                style="position: absolute; bottom: 10vh; left: 50%; transform: translateX(-50%); z-index: 3;">
+                <button class="main-cla-btn cta-btn" role="button">
+                    Get Entry Pass </button> 
+            </a> -->
+
+            <div class="scrolldown"
+                style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+                bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: var(--accent-color); animation: scrolldown 1.2s ease-in-out infinite 0.15s;">
+            </div>
+            <div class="scrolldown"
+                style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+                bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: var(--accent-color); animation: scrolldown 1.2s ease-in-out infinite;">
+            </div>
+        </section>
+
+
+
+        <article id="event-details">
+            <!-- <div class="container-filed">
+                <div class="container">
+                    <div class="row mt-5 align-items-center justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="row align-items-center justify-content-center text-center text-md-start">
+                                <div class="col-2 icon-field">
+                                    <img class="icon" src="assets/image/icon/date-icon.png" alt="date icon">
+                                </div>
+                                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-top"
+                                    data-aos-delay="100">21 February, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="row align-items-center justify-content-center text-center text-md-start">
+                                <div class="col-2 icon-field">
+                                    <img class="icon" src="assets/image/icon/time-icon.png" alt="time icon">
+                                </div>
+                                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-right"
+                                    data-aos-delay="200">11.00am -
+                                    02.00pm</div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-4 mb-4 ">
+                            <div class="row align-items-center justify-content-center text-center text-md-start">
+                                <div class="col-2 icon-field">
+                                    <img class="icon" src="assets/image/icon/place-icon.png" alt="place icon">
+                                </div>
+                                <div class="col-0 col-sx-10 col-md-5 col-lg-10" data-aos="fade-right"
+                                    data-aos-delay="300">
+                                    Prestige Business Park, 33, Marathahalli - Sarjapur Outer Ring Rd, Bellandur,<br>
+                                    Bellandur Amanikere, Bengaluru, Karnataka 560103
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="container ">
+                <h1 data-aos="fade-up" data-aos-delay="100" class="text-center mb-5 mt-5">
+                    <b>Celebrating the life journey of self-made and selfless Women in <br> Digital Business</b>
+                </h1>
+            </div>
+        </article>
+
+
+        <!-- speakers Section -->
+        <article id="speakers" class="speakers mt-5" data-aos="fade-up">
+
+            <!--  Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2 data-aos="fade-up">10 unique speakers</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Witness 300 years of life journey in a day</p>
+            </div>
+
+            <div class="container">
+
+                <div class="row g-3 mb-4" id="speakers-row">
+
+                </div>
+
+                <script>
+
+                    const speakersRow = document.getElementById("speakers-row");
+                    let speakersDetails = [
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "https://images.unsplash.com/photo-1609436132311-e4b0c9370469?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                        {
+                            name: "Priyanka",
+                            location: "India",
+                            profession: "Developer / House-wife",
+                            imageSrc: "assets/image/speaker/dummy.jpg",
+                            linkedin: {
+                                logo: "assets/image/icons/linkedin-logo.png",
+                                profile: "#"
+                            }
+                        },
+                    ]
+
+                    speakersDetails.forEach(e => {
+                        const div = document.createElement("div");
+                        div.className = "col w-full";
+                        div.setAttribute("data-aos", "fade-up");
+                        div.setAttribute("data-aos-delay", "50");
+                        div.innerHTML = `
+                                <div class="speaker ">
+                                    <div class="cards mx-auto">
+                                        <div class="imgBx">
+                                            <img
+                                                src="${e.imageSrc}" />
+                                        </div>
+                                        <div class="content">
+                                            <div class="details">
+                                                <h2>${e.name} <br /><span>${e.profession}</span></h2>
+                                                <p class="mb-0">${e.location}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+
+                        speakersRow.append(div);
+                    });
+
+
+                </script>
+
+            </div>
+        </article>
+
+        <!-- About Section -->
+        <article id="about" class="about" data-aos="fade-up">
+            <div class="container">
+                <div class="container section-title mt-5" data-aos="fade-up">
+                    <h2 class="mt-5 font-weight-bold" data-aos="fade-up">About Us</h2>
+                    <p class="font-italic" data-aos="fade-up">The Half Brick is a Global Community</p>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row align-items-xl-center gy-5">
+                        <div class="col-xl-12 content" data-aos="fade-up" data-aos-delay="100">
+                            <p class="card-text font-weight-bold mt-2" style="font-size: 18px;" data-aos="fade-up"
+                                data-aos-delay="100">Founded in 2021,<br><br>
+                                Section 8 Non-Profit Organization<br><br> <span
+                                    class="primary-text">TheHalfBrick<sup>®</sup></span> have created an
+                                inclusive people’s platform named as raw stories to inspire our younger generation in
+                                the form of
+                                storytelling, to recognize and celebrate the life journey of the self-made and selfless
+                                people who are
+                                growing from ground zero from all walks of life around the world. Our motto is to create
+                                “self-dependent
+                                younger generations” to achieve that we are going to upskill and cross skill our
+                                Unemployed Graduates,
+                                Graduates, students, College dropouts, school dropouts and working professionals. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row align-items-xl-center gy-5">
+                        <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="mt-2 primary-text font-weight-bold" data-aos="fade-up" data-aos-delay="200">
+                                Microsoft x TheHalfBrick
+                                Raw Stories
+                            </h2>
+                            <p class="card-text" style="font-size: 18px;text-align: justify;" data-aos="fade-up"
+                                data-aos-delay="200">At Microsoft, we honor the remarkable journeys of self-made and
+                                selfless women who are shaping the future of digital business. These trailblazers come
+                                from diverse backgrounds, rising from ground zero to transform industries, inspire
+                                communities, and redefine what it means to lead with purpose.
+                                Join us as these inspiring women share their life stories, reflecting on the challenges
+                                they faced, the setbacks they overcame, and the resilience that propelled them forward.
+                                Their experiences remind us of the true meaning of success: perseverance, innovation,
+                                and giving back.
+                                Together, let’s celebrate their achievements and amplify the voices of women who are
+                                creating a more inclusive and connected digital world.<br><br>
+                                <b>Event Date:</b> 21 February, 2025<br> <b>Event Venue:</b> Prestige Business Park,
+                                33, Marathahalli - Sarjapur Outer Ring Rd, Bellandur,
+                                Bellandur Amanikere, Bengaluru, Karnataka 560103<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--Footer img Section  -->
+        <article id="img-section" class="img-section mt-5">
+            <div class="container-filed">
+                <!-- <img src="assets/image/Bangalore City Skyline Silhouette.png"> -->
+            </div>
+        </article>
+    </main>
+
+
+    <!-- Scroll Top Button -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <!--  Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const Category = urlParams.get("category") || "";
+
+        function updateScrollValues() {
+            const progressBar = document.getElementById("red-progress");
+            var totalPageLength = document.body.scrollHeight;
+            var scrollingHeight = window.scrollY;
+            var maxScrollingHeight = totalPageLength - window.innerHeight;
+            let percentage = (scrollingHeight / maxScrollingHeight) * 100;
+            progressBar.style.width = percentage + "%";
+        }
+
+        updateScrollValues();
+
+        window.addEventListener('scroll', updateScrollValues);
+
+        const ctaActionBtn = document.querySelectorAll(".cta-btn");
+        const ctaActionBtnLink = document.querySelectorAll(".cta-btn-link");
+        ctaActionBtnLink.forEach(e => {
+            e.setAttribute("href", `form/`)
+        });
+
+
+    </script>
+
+</body>
+
+</html>
